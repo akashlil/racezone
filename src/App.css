@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.section-gap {
+  margin: 150px 0px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

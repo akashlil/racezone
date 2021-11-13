@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AuthProvider from "./context/AuthProvider";
+import Deshboard from "./pages/Deshboard/Deshboard/Deshboard";
+import Home from "./pages/Home/Home/Home";
+import Login from "./pages/Login/Login";
+import PrivateRoute from "./pages/PrivateRoute/PrivateRoute";
+import Register from "./pages/Register/Register";
+import ProductDetals from "./pages/ProductDetals/ProductDetals";
+import DisplayProductAll from "./pages/DisplayProductAll/DisplayProductAll";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/login">
+            <Login></Login>
+          </Route>
+          <Route exact path="/register">
+            <Register></Register>
+          </Route>
+          <Route path="/show/all/product">
+            <DisplayProductAll></DisplayProductAll>
+          </Route>
+          <PrivateRoute path="/deshboard">
+            <Deshboard></Deshboard>
+          </PrivateRoute>
+          <PrivateRoute path="/productdetals/:Productid">
+            <ProductDetals></ProductDetals>
+          </PrivateRoute>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 
