@@ -18,7 +18,7 @@ const Register = () => {
     if (data.password !== data.retypepassword) {
       alert("password not same");
       return;
-    } else if (data.password >= 6) {
+    } else if (data.password.length < 6) {
       alert("password at last 6 charter");
       return;
     }
