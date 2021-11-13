@@ -7,6 +7,7 @@ import Reviews from "../Reviews/Reviews";
 import Footer from "../../Shared/Footer/Footer";
 import useAllDataLoad from "../../../hooks/useAllDataLoad";
 import { NavLink } from "react-router-dom";
+import LatestNews from "../LatestNews/LatestNews";
 
 const Home = () => {
   const { productData, dataLoadTime } = useAllDataLoad();
@@ -52,6 +53,7 @@ const Home = () => {
         </div>
       </div>
       <Reviews></Reviews>
+      <LatestNews></LatestNews>
       <Footer></Footer>
     </div>
   );

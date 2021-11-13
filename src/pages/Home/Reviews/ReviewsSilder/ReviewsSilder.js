@@ -6,13 +6,16 @@ const ReviewsSilder = ({ review }) => {
   return (
     <div className="row p-3">
       <div className="col">
-        <div className="card p-0 h-100">
+        <div className="card p-0 h-100 border-0">
           <div className=" rounded-3">
-            <div className=" bg-black text-white">
+            <div
+              className="text-white shadow rounded-3"
+              style={{ backgroundColor: "#222222" }}
+            >
               <p className="text-start p-3">{reviewsdets?.slice(0, 150)}</p>
             </div>
 
-            <div className="d-flex justify-content-center my-3">
+            <div className="d-flex justify-content-center my-3 ">
               <img
                 src={photoURL}
                 alt=""
