@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const AddAdmin = () => {
+  const [SuccessAdminmass, setSuccessAdminmass] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,19 +21,42 @@ const AddAdmin = () => {
       .then((res) => res.json())
       .then((data) => {
         reset();
+        setSuccessAdminmass(true);
         console.log(data);
       });
   };
   return (
-    <div>
-      <h1>Add admin </h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("email", { required: true })} />
-        {/* errors will return when field validation fails  */}
-        {errors.email && <span>Email field is required</span>}
+    <div className="row">
+      {SuccessAdminmass && (
+        <div
+          className="alert alert-success alert-dismissible fade show col-md-8 mx-auto"
+          role="alert"
+        >
+          <strong>Admin Add</strong> Successfully
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+            onClick={() => setSuccessAdminmass(false)}
+          ></button>
+        </div>
+      )}
+      <div className="col-md-6">
+        <div className=" card p-5 mt-5 mx-auto">
+          <h1>Add admin </h1>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <input
+              {...register("email", { required: true })}
+              className="col-6 p-2"
+            />
+            {/* errors will return when field validation fails  */}
+            {errors.email && <span>Email field is required</span>}
 
-        <input type="submit" />
-      </form>
+            <input type="submit" className="btn btn-info ms-4" />
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

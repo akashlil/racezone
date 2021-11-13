@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const Login = () => {
   let history = useHistory();
   let location = useLocation();
-  const { googleLogin, userLogin } = useAuth();
+  const { googleLogin, userLogin, loginError } = useAuth();
 
   const {
     register,
@@ -32,8 +32,13 @@ const Login = () => {
       </div>
       <div className="col-md-6 ">
         <div className=" p-5">
+          {loginError && (
+            <div class="alert alert-warning" role="alert">
+              <strong>You can`t be Login</strong>
+              {loginError}
+            </div>
+          )}
           <h1 className="card-title  fw-bolder mb-5">Login With</h1>
-
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
               <label htmlFor="exampleInputEmail1" className="form-label">

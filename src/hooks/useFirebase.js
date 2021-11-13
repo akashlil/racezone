@@ -45,8 +45,7 @@ const useFirebase = () => {
         setUser(user);
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        setRegisterError(errorMessage);
+        setRegisterError(error.message);
       })
       .finally(() => {
         setloadData(false);
@@ -112,7 +111,7 @@ const useFirebase = () => {
       setAdminloadData(false);
     });
     return () => unsubcri;
-  }, []);
+  }, [auth]);
 
   useEffect(() => {
     fetch(`https://aqueous-gorge-85514.herokuapp.com/user/${user.email}`)

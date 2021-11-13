@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const Register = () => {
   let history = useHistory();
   let location = useLocation();
-  const { googleLogin, registerUser } = useAuth();
+  const { googleLogin, registerUser, registerError } = useAuth();
 
   const {
     register,
@@ -39,6 +39,11 @@ const Register = () => {
       </div>
       <div className="col-md-6 ">
         <div className="p-5">
+          {registerError && (
+            <div class="alert alert-warning" role="alert">
+              <strong>You can`t be Register</strong> {registerError}
+            </div>
+          )}
           <h1 className="card-title  fw-bolder mb-5">Register User</h1>
 
           <form onSubmit={handleSubmit(onSubmit)}>

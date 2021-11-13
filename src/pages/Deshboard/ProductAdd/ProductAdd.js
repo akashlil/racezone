@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const ProductAdd = () => {
+  const [productaddsuccessMassage, setproductaddsuccessMassage] =
+    useState(false);
   const {
     register,
     handleSubmit,
@@ -22,12 +24,28 @@ const ProductAdd = () => {
       .then((data) => {
         if (data.acknowledged) {
           reset();
+          setproductaddsuccessMassage(true);
         }
       });
   };
   return (
     <div className="row mt-5">
       <div className="col-md-6 col-12">
+        {productaddsuccessMassage && (
+          <div
+            className="alert alert-success alert-dismissible fade show col-md-6 mx-auto"
+            role="alert"
+          >
+            <strong>Product add submite</strong> Successfully
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+              onClick={() => setproductaddsuccessMassage(false)}
+            ></button>
+          </div>
+        )}
         <div className="card p-5  ">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
@@ -78,9 +96,7 @@ const ProductAdd = () => {
           </form>
         </div>
       </div>
-      <div className="col-md-6 col-12">
-        <h1>ok</h1>
-      </div>
+      <div className="col-md-6 col-12"></div>
     </div>
   );
 };

@@ -41,12 +41,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/myoder">
+              <NavLink className="nav-link" to="/aboutus">
                 About us
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/myoder">
+              <NavLink className="nav-link" to="/contact">
                 Contact us
               </NavLink>
             </li>
@@ -102,14 +102,14 @@ const Navbar = () => {
                           <hr />
 
                           <div className="list-group text-start ">
-                            <Link to="/deshboard/myorder">
+                            {/* <Link to="/deshboard/myorder">
                               <button
                                 type="button"
                                 className="list-group-item list-group-item-action border-0"
                               >
                                 <i className="fas fa-book">My Order</i>
                               </button>
-                            </Link>
+                            </Link> */}
                             <button
                               onClick={logOut}
                               className="list-group-item list-group-item-action border-0"
