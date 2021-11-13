@@ -56,9 +56,9 @@ const Footer = () => {
             <div className="cols">
               <h4 className="text-uppercase fw-bold">pay save</h4>
               <div>
-                Plug into Paysafe | We provide simple and secure payment
-                solutions to businesses of all sizes around the world. Our
-                industry-leading capabilities enable .
+                price, news, tips, reviews, showroom address and brand details
+                etc. Our basic goal is to provide bicycle related essential data
+                to the visitors in easy way.
               </div>
             </div>
           </div>

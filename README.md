@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Bicycle Saleing online website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bicycle Saleing website [RaceZone.com](https://race-zone-ce537.web.app/).
 
-## Available Scripts
+## What Are The Of Choosing online website ?
 
-In the project directory, you can run:
+RaceZone.com is the first and largest web portal about bicycle in Bangladesh. We have started our journey on 23rd August, 2020. We publish bike specifications, price, news, tips, reviews, showroom address and brand details etc. Our basic goal is to provide bicycle related essential data to the visitors in easy way. We also share user experiences and their valuable opinion about their bicycle. So that our visitors can get some idea about the bicycle they are looking for.
 
-### `npm start`
+web site working
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. website working
+   1.loging system
+   2.logout system
+   3.product buy system
+   4.admin deshboard
+   5.user deshbord
+   6.user order manage
+   7.admin order manage
+   8.product add admin
+   9.user order product deletes
+   10.aadmin all product deletes
+   11.manage all order
+   12.update oder status user see
+   13.data store mongo bd ect......
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## ABOUT US
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    The company has been founded by Ret. Maj. Gen. Amjad Khan Chowdhury In 1981 with a vision, to leveraging the farmer in irrigation as well as ensuring drinking water through Water Pump & Tube well. After that it commenced its operation in different categories & gradually started PVC in 1996 & Plastic line in 2003. The BIKE factory situated from 140 km northeast of Dhaka with 21934 sq meter company at Hobigonj Industrial Park (HIP) in Hobigonj district which is fully equipped with world class close type Paint plant, latest Conveyer line, Machine for Mitering, Fork, Frame, Rim, Chrome Plating & Spoke, Assembly line for bike & wheel with manufacturing capacity of 300,000 units per year. Our export business has been started from 2015. We are very strong organization of 800 employees dedicated to supply quality complete bike globally.
