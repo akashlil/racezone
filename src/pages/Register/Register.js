@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../context/useAuth";
 import { useForm } from "react-hook-form";
@@ -18,7 +18,7 @@ const Register = () => {
     if (data.password !== data.retypepassword) {
       alert("password not same");
       return;
-    } else if (data.password > 5) {
+    } else if (data.password >= 6) {
       alert("password at last 6 charter");
       return;
     }
