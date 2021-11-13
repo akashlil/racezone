@@ -11,7 +11,7 @@ const ProductAdd = () => {
 
   // product add
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/product/add`, {
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/product/add`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

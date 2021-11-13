@@ -31,7 +31,7 @@ const ProductDetals = () => {
       data["productname"] = findProduct.productname;
       data["productprice"] = findProduct.productprice;
       data["status"] = 1;
-      fetch(`http://localhost:5000/order/product`, {
+      fetch(`https://aqueous-gorge-85514.herokuapp.com/order/product`, {
         method: "POST",
         headers: {
           "content-type": "application/json",

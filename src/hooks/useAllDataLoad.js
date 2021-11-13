@@ -7,7 +7,7 @@ const useAllDataLoad = () => {
   const [getDatacallagin, setgetDatacallagin] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allproduct/show`)
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/allproduct/show`)
       .then((res) => res.json())
       .then((data) => {
         setProductData(data);
@@ -19,7 +19,7 @@ const useAllDataLoad = () => {
 
   // orderList database
   useEffect(() => {
-    fetch(`http://localhost:5000/oderlist`)
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/oderlist`)
       .then((res) => res.json())
       .then((data) => {
         setOrderList(data);
@@ -30,7 +30,7 @@ const useAllDataLoad = () => {
   }, [getDatacallagin]);
 
   const deleteOrderList = (id) => {
-    fetch(`http://localhost:5000/oderlist/${id}`, {
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/oderlist/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
@@ -45,7 +45,7 @@ const useAllDataLoad = () => {
 
   const udateOrderlist = (data) => {
     setgetDatacallagin(false);
-    fetch(`http://localhost:5000/statusupdate/${data.id}`, {
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/statusupdate/${data.id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

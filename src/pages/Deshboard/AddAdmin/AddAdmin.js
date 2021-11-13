@@ -10,7 +10,7 @@ const AddAdmin = () => {
   } = useForm();
   const onSubmit = (data) => {
     const user = { email: data.email };
-    fetch(`http://localhost:5000/make/admin`, {
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/make/admin`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

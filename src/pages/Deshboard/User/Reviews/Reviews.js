@@ -16,7 +16,7 @@ const Reviews = () => {
     data["username"] = user.displayName;
     data["useremail"] = user.email;
     data["photoURL"] = user.photoURL;
-    fetch(`http://localhost:5000/user/review`, {
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/user/review`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -10,7 +10,7 @@ const Reviews = () => {
   const [reviewsLoadData, SetreviwsLoadData] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/reviewdata/show`)
+    fetch(`https://aqueous-gorge-85514.herokuapp.com/reviewdata/show`)
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
