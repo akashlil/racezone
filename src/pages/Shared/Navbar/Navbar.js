@@ -54,8 +54,8 @@ const Navbar = () => {
             {user.email ? (
               <li className="nav-item">
                 <div className="nav-link m-0 d-md-flex text-center">
-                  <div class="d-flex mb-2">
-                    <div class="dropdown me-1">
+                  <div className="d-flex mb-2">
+                    <div className="dropdown me-1">
                       <img
                         src={
                           user.photoURL
@@ -64,7 +64,7 @@ const Navbar = () => {
                         }
                         type="button"
                         alt=""
-                        class="btn p-0 me-md-5 dropdown-toggle rounded-circle"
+                        className="btn p-0 me-md-5 dropdown-toggle rounded-circle"
                         style={{ width: "50px", height: "50px" }}
                         data-bs-toggle="dropdown"
                         data-bs-display="static"
@@ -74,7 +74,7 @@ const Navbar = () => {
                       />
 
                       <div
-                        class="dropdown-menu position-absolute  shadow-lg  border-0 rounded-3"
+                        className="dropdown-menu position-absolute  shadow-lg  border-0 rounded-3"
                         aria-labelledby="dropdownMenuOffset"
                         style={{
                           width: "210px",
@@ -90,7 +90,7 @@ const Navbar = () => {
                             alt=""
                             style={{ width: "100px", height: "100px" }}
                             srcset=""
-                            class="rounded-circle"
+                            className="rounded-circle"
                           />
                           <p className="fw-bolder  mt-3">{user.displayName}</p>
                           <button
@@ -101,18 +101,18 @@ const Navbar = () => {
                           </button>
                           <hr />
 
-                          <div class="list-group text-start ">
+                          <div className="list-group text-start ">
                             <Link to="/deshboard/myorder">
                               <button
                                 type="button"
-                                class="list-group-item list-group-item-action border-0"
+                                className="list-group-item list-group-item-action border-0"
                               >
-                                <i class="fas fa-book">My Order</i>
+                                <i className="fas fa-book">My Order</i>
                               </button>
                             </Link>
                             <button
                               onClick={logOut}
-                              class="list-group-item list-group-item-action border-0"
+                              className="list-group-item list-group-item-action border-0"
                             >
                               <i className="fas fa-sign-out-alt ">LogOut</i>
                             </button>

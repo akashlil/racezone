@@ -27,7 +27,7 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div class="row row-cols-1 row-cols-lg-3  row-cols-md-2 g-4">
+          <div className="row row-cols-1 row-cols-lg-3  row-cols-md-2 g-4">
             {dataLoadTime ? (
               <div
                 className="spinner-border text-success mx-auto"

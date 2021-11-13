@@ -30,45 +30,45 @@ const ProductAdd = () => {
       <div className="col-md-6 col-12">
         <div className="card p-5  ">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div class="mb-3">
-              <label class="form-label">Product Name</label>
+            <div className="mb-3">
+              <label className="form-label">Product Name</label>
               <input
                 {...register("productname", { required: true })}
                 type="text"
-                class="form-control"
+                className="form-control"
               />
               {errors.productname && (
                 <span className="text-danger">This field is required</span>
               )}
             </div>
-            <div class="mb-3">
-              <label class="form-label">Product Price</label>
+            <div className="mb-3">
+              <label className="form-label">Product Price</label>
               <input
                 {...register("productprice", { required: true })}
                 type="text"
-                class="form-control"
+                className="form-control"
               />
               {errors.productprice && (
                 <span className="text-danger">This field is required</span>
               )}
             </div>
-            <div class="mb-3">
-              <label class="form-label">Product Images Link</label>
+            <div className="mb-3">
+              <label className="form-label">Product Images Link</label>
               <input
                 {...register("productimg", { required: true })}
                 type="text"
-                class="form-control"
+                className="form-control"
               />
               {errors.productimg && (
                 <span className="text-danger">This field is required</span>
               )}
             </div>
-            <div class="mb-3">
-              <label class="form-label">Product Desprication</label>
+            <div className="mb-3">
+              <label className="form-label">Product Desprication</label>
               <textarea
                 {...register("productdes", { required: true })}
                 type="text"
-                class="form-control"
+                className="form-control"
               />
               {errors.productdes && (
                 <span className="text-danger">This field is required</span>

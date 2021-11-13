@@ -76,33 +76,33 @@ const ProductDetals = () => {
                 </div>
                 <div className="col-md-7 col-12 mx-0 mx-md-4">
                   <form onSubmit={handleSubmit(onSubmit)}>
-                    <div class="mb-3">
-                      <label class="form-label">Product Name</label>
+                    <div className="mb-3">
+                      <label className="form-label">Product Name</label>
                       <input
                         type="text"
                         {...register("productname")}
                         disabled
                         defaultValue={findProduct?.productname}
-                        class="form-control"
+                        className="form-control"
                       />
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">Product Prices tk</label>
+                    <div className="mb-3">
+                      <label className="form-label">Product Prices tk</label>
                       <input
                         type="text"
                         {...register("productprice")}
                         disabled
                         defaultValue={findProduct?.productprice}
-                        class="form-control"
+                        className="form-control"
                       />
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">Enter You Email Show</label>
+                    <div className="mb-3">
+                      <label className="form-label">Enter You Email Show</label>
                       <input
                         {...register("email", { required: true })}
                         type="text"
                         defaultValue={user?.email}
-                        class="form-control"
+                        className="form-control"
                       />
                       {errors.email && (
                         <span className="text-danger">
@@ -111,13 +111,13 @@ const ProductDetals = () => {
                       )}
                     </div>
 
-                    <div class="mb-3">
-                      <label class="form-label">Enter Your Name</label>
+                    <div className="mb-3">
+                      <label className="form-label">Enter Your Name</label>
                       <input
                         {...register("name", { required: true })}
                         type="text"
                         defaultValue={user?.displayName}
-                        class="form-control"
+                        className="form-control"
                       />
                       {errors.name && (
                         <span className="text-danger">
@@ -125,12 +125,12 @@ const ProductDetals = () => {
                         </span>
                       )}
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">Enter Your Phone</label>
+                    <div className="mb-3">
+                      <label className="form-label">Enter Your Phone</label>
                       <input
                         {...register("phone", { required: true })}
                         type="number"
-                        class="form-control"
+                        className="form-control"
                       />
                       {errors.phone && (
                         <span className="text-danger">
@@ -138,14 +138,14 @@ const ProductDetals = () => {
                         </span>
                       )}
                     </div>
-                    <div class="mb-3">
-                      <label class="form-label">
+                    <div className="mb-3">
+                      <label className="form-label">
                         Enter Your Shopping Address
                       </label>
                       <textarea
                         {...register("shoppingaddress", { required: true })}
                         type="text"
-                        class="form-control"
+                        className="form-control"
                       />
                       {errors.shoppingaddress && (
                         <span className="text-danger">

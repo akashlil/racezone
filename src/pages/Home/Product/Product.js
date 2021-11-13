@@ -9,21 +9,21 @@ const Product = ({ product }) => {
     history.push(`/productdetals/${id}`);
   };
   return (
-    <div class="col">
-      <div class="card h-100">
-        <img src={productimg} class="card-img-top" alt="" />
-        <div class="card-body ">
+    <div className="col">
+      <div className="card h-100">
+        <img src={productimg} className="card-img-top" alt="" />
+        <div className="card-body ">
           <div className="text-center">
-            <h5 class="card-title">{productname}</h5>
+            <h5 className="card-title">{productname}</h5>
             <span className="">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
+              <i className="fas fa-star"></i>
             </span>
-            <h5 class="card-title py-2">BD: {productprice} tk</h5>
-            <p class="card-text " style={{ textAlign: "justify" }}>
+            <h5 className="card-title py-2">BD: {productprice} tk</h5>
+            <p className="card-text " style={{ textAlign: "justify" }}>
               {productdes.slice(0, 100)}
             </p>
             <button

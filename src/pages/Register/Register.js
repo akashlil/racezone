@@ -42,57 +42,57 @@ const Register = () => {
           <h1 className="card-title  fw-bolder mb-5">Register User</h1>
 
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Full Name
               </label>
               <input
                 {...register("name", { required: true })}
                 type="text"
                 required
-                class="form-control"
+                className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
               {errors.name && <span>This field is required</span>}
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleInputEmail1" className="form-label">
                 Email address
               </label>
               <input
                 {...register("email", { required: true })}
                 type="email"
                 required
-                class="form-control"
+                className="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
               />
               {errors.email && <span>This field is required</span>}
             </div>
 
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
                 Password
               </label>
               <input
                 {...register("password", { required: true })}
                 type="password"
                 required
-                class="form-control"
+                className="form-control"
                 id="exampleInputPassword1"
               />
               {errors.password && <span>This field is required password</span>}
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleInputPassword1" className="form-label">
                 Re-Type Password
               </label>
               <input
                 {...register("retypepassword", { required: true })}
                 type="password"
                 required
-                class="form-control"
+                className="form-control"
                 id="exampleInputPassword1"
               />
               {errors.retypepassword && (
@@ -100,7 +100,7 @@ const Register = () => {
               )}
             </div>
 
-            <button type="submit" class="fs-5 btn btn-info w-100">
+            <button type="submit" className="fs-5 btn btn-info w-100">
               Register
             </button>
           </form>

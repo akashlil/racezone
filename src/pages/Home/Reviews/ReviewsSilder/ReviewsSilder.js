@@ -5,7 +5,7 @@ const ReviewsSilder = ({ review }) => {
 
   return (
     <div className="row p-3">
-      <div class="col">
+      <div className="col">
         <div className="card p-0 h-100">
           <div className=" rounded-3">
             <div className=" bg-black text-white">

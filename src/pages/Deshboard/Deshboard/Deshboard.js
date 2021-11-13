@@ -19,7 +19,7 @@ const Deshboard = () => {
   };
   return (
     <div className="main-continer">
-      <nav class="navbar navbar-light bg-black text-white">
+      <nav className="navbar navbar-light bg-black text-white">
         <div className="w-100 d-flex justify-content-between">
           <div className="px-2">
             <h1>Deshboard</h1>
@@ -37,13 +37,13 @@ const Deshboard = () => {
           </div>
         </div>
       </nav>
-      <div class="sidebar">
-        <Link class="bg-info" to={`/`}>
+      <div className="sidebar">
+        <Link className="bg-info" to={`/`}>
           My website
         </Link>
         {admin && (
           <Link
-            class={active === 1 ? "active" : ""}
+            className={active === 1 ? "active" : ""}
             to={`${url}/addadmin`}
             onClick={() => activeClassOn(1)}
           >
@@ -52,7 +52,7 @@ const Deshboard = () => {
         )}
         {admin && (
           <Link
-            class={active === 2 ? "active" : ""}
+            className={active === 2 ? "active" : ""}
             to={`${url}/productadd`}
             onClick={() => activeClassOn(2)}
           >
@@ -61,7 +61,7 @@ const Deshboard = () => {
         )}
         {admin && (
           <Link
-            class={active === 5 ? "active" : ""}
+            className={active === 5 ? "active" : ""}
             to={`${url}/manage/all/order`}
             onClick={() => activeClassOn(5)}
           >
@@ -70,7 +70,7 @@ const Deshboard = () => {
         )}
         {!admin && (
           <Link
-            class={active === 3 ? "active" : ""}
+            className={active === 3 ? "active" : ""}
             to={`${url}/reviewadd`}
             onClick={() => activeClassOn(3)}
           >
@@ -80,7 +80,7 @@ const Deshboard = () => {
 
         {!admin && (
           <Link
-            class={active === 4 ? "active" : ""}
+            className={active === 4 ? "active" : ""}
             to={`${url}/myorder`}
             onClick={() => activeClassOn(4)}
           >
@@ -89,7 +89,7 @@ const Deshboard = () => {
         )}
 
         {/* <Link
-          class={active === 2 ? "active" : ""}
+          className={active === 2 ? "active" : ""}
           to={`${url}/productadd`}
           onClick={() => activeClassOn(2)}
         >
@@ -97,7 +97,7 @@ const Deshboard = () => {
         </Link> */}
       </div>
 
-      <div class="content">
+      <div className="content">
         <Switch>
           <Route path={`${path}/reviewadd`}>
             <Reviews></Reviews>

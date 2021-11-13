@@ -35,13 +35,13 @@ const Reviews = () => {
     <div className="row mt-5">
       {successMassage && (
         <div
-          class="alert alert-success alert-dismissible fade show col-md-8 mx-auto"
+          className="alert alert-success alert-dismissible fade show col-md-8 mx-auto"
           role="alert"
         >
           <strong>Review submite</strong> Successfully
           <button
             type="button"
-            class="btn-close"
+            className="btn-close"
             data-bs-dismiss="alert"
             aria-label="Close"
             onClick={() => setSuccessMassage(false)}
@@ -51,43 +51,43 @@ const Reviews = () => {
       <div className="col-md-8 col-12 mx-auto">
         <div className="card p-5  ">
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div class="mb-3">
-              <label class="form-label">Your Name</label>
+            <div className="mb-3">
+              <label className="form-label">Your Name</label>
               <input
                 type="text"
                 {...register("productprice")}
                 disabled
                 defaultValue={user.displayName}
-                class="form-control"
+                className="form-control"
               />
             </div>
-            <div class="mb-3">
-              <label class="form-label">Your Email</label>
+            <div className="mb-3">
+              <label className="form-label">Your Email</label>
               <input
                 type="text"
                 {...register("productprice")}
                 disabled
                 defaultValue={user.email}
-                class="form-control"
+                className="form-control"
               />
             </div>
-            <div class="mb-3">
-              <label class="form-label">Product Review Rating</label>
+            <div className="mb-3">
+              <label className="form-label">Product Review Rating</label>
               <input
                 {...register("rating", { required: true })}
                 type="number"
-                class="form-control"
+                className="form-control"
               />
               {errors.rating && (
                 <span className="text-danger">This field is required</span>
               )}
             </div>
-            <div class="mb-3">
-              <label class="form-label">Product detials </label>
+            <div className="mb-3">
+              <label className="form-label">Product detials </label>
               <textarea
                 {...register("reviewsdets", { required: true })}
                 type="text"
-                class="form-control"
+                className="form-control"
               />
               {errors.reviewsdets && (
                 <span className="text-danger">This field is required</span>
