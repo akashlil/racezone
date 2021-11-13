@@ -5,6 +5,7 @@ import AddAdmin from "../AddAdmin/AddAdmin";
 import AdminPrivateRoute from "../AdminPrivateRoute/AdminPrivateRoute";
 import ManageallOrder from "../ManageallOrder/ManageallOrder";
 import ProductAdd from "../ProductAdd/ProductAdd";
+import Pay from "../User/Pay/Pay";
 import Reviews from "../User/Reviews/Reviews";
 import UserOrder from "../User/UserOrder/UserOrder";
 import "./Deshboard.css";
@@ -61,18 +62,18 @@ const Deshboard = () => {
         )}
         {admin && (
           <Link
-            className={active === 5 ? "active" : ""}
+            className={active === 3 ? "active" : ""}
             to={`${url}/manage/all/order`}
-            onClick={() => activeClassOn(5)}
+            onClick={() => activeClassOn(3)}
           >
             Manage All Order
           </Link>
         )}
         {!admin && (
           <Link
-            className={active === 3 ? "active" : ""}
+            className={active === 4 ? "active" : ""}
             to={`${url}/reviewadd`}
-            onClick={() => activeClassOn(3)}
+            onClick={() => activeClassOn(4)}
           >
             Review Add
           </Link>
@@ -80,11 +81,20 @@ const Deshboard = () => {
 
         {!admin && (
           <Link
-            className={active === 4 ? "active" : ""}
+            className={active === 5 ? "active" : ""}
             to={`${url}/myorder`}
-            onClick={() => activeClassOn(4)}
+            onClick={() => activeClassOn(5)}
           >
             My Order
+          </Link>
+        )}
+        {!admin && (
+          <Link
+            className={active === 6 ? "active" : ""}
+            to={`${url}/pay`}
+            onClick={() => activeClassOn(6)}
+          >
+            Oder Pay
           </Link>
         )}
 
@@ -101,6 +111,9 @@ const Deshboard = () => {
         <Switch>
           <Route path={`${path}/reviewadd`}>
             <Reviews></Reviews>
+          </Route>
+          <Route path={`${path}/pay`}>
+            <Pay></Pay>
           </Route>
           <Route path={`${path}/myorder`}>
             <UserOrder></UserOrder>

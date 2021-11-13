@@ -10,6 +10,7 @@ import PrivateRoute from "./pages/PrivateRoute/PrivateRoute";
 import Register from "./pages/Register/Register";
 import ProductDetals from "./pages/ProductDetals/ProductDetals";
 import DisplayProductAll from "./pages/DisplayProductAll/DisplayProductAll";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           <Route exact path="/register">
             <Register></Register>
           </Route>
-          <Route path="/show/all/product">
+          <Route exact path="/show/all/product">
             <DisplayProductAll></DisplayProductAll>
           </Route>
           <PrivateRoute path="/deshboard">
@@ -34,6 +35,9 @@ function App() {
           <PrivateRoute path="/productdetals/:Productid">
             <ProductDetals></ProductDetals>
           </PrivateRoute>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
       </Router>
     </AuthProvider>

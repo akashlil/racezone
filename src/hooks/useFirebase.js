@@ -62,11 +62,13 @@ const useFirebase = () => {
         setUser(user);
         setloginError("");
         history.replace(from);
-        setloadData(false);
       })
       .catch((error) => {
         const errorMessage = error.message;
         setloginError(errorMessage);
+      })
+      .finally(() => {
+        setloadData(false);
       });
   };
 
@@ -79,9 +81,9 @@ const useFirebase = () => {
         const user = result.user;
         setUser(user);
         setloginError("");
-        setloadData(false);
         saveUser(user.email, user.displayName, "PUT");
         history.replace(from);
+        setloadData(false);
       })
       .catch((error) => {
         const errorMessage = error.message;
