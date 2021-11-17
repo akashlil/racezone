@@ -20,7 +20,6 @@ const useFirebase = () => {
   // admin && user data
   const [admin, setAdmin] = useState(false);
   const [loadData, setloadData] = useState(true);
-  const [adminloadData, setAdminloadData] = useState(true);
 
   // error message
   const [registerError, setRegisterError] = useState("");
@@ -29,9 +28,9 @@ const useFirebase = () => {
   // register user email and password snd displayName
   const registerUser = (email, password, name, history, location) => {
     setloadData(true);
-    const { from } = location.state || { from: { pathname: "/" } };
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        const { from } = location.state || { from: { pathname: "/" } };
         const user = userCredential.user;
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -47,56 +46,42 @@ const useFirebase = () => {
       .catch((error) => {
         setRegisterError(error.message);
       })
-      .finally(() => {
-        setloadData(false);
-      });
+      .finally(() => setloadData(false));
   };
 
   // user login email and password
-  const userLogin = (email, password, history, location) => {
+  const userLogin = (email, password) => {
     setloadData(true);
-    const { from } = location.state || { from: { pathname: "/" } };
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredentail) => {
-        const user = userCredentail.user;
-        setUser(user);
-        setloginError("");
-        history.replace(from);
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        setloginError(errorMessage);
-      })
-      .finally(() => {
-        setloadData(false);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   // googleLogin user button
   const googleLogin = (history, location) => {
     setloadData(true);
-    const { from } = location.state || { from: { pathname: "/" } };
+
     signInWithPopup(auth, googleProvider)
       .then((result) => {
+        const { from } = location?.state || { from: { pathname: "/" } };
         const user = result.user;
         setUser(user);
         setloginError("");
         saveUser(user.email, user.displayName, "PUT");
         history.replace(from);
-        setloadData(false);
       })
       .catch((error) => {
         const errorMessage = error.message;
         setloginError(errorMessage);
-      });
+      })
+      .finally(() => setloadData(false));
   };
 
   // logOut user
-  const logOut = () => {
+  const logOut = (history) => {
     signOut(auth)
       .then(() => {
         setUser({});
         setloadData(true);
+        history.push("/login");
       })
       .catch((error) => {});
   };
@@ -110,7 +95,6 @@ const useFirebase = () => {
         setUser({});
       }
       setloadData(false);
-      setAdminloadData(false);
     });
     return () => unsubcri;
   }, [auth]);
@@ -120,7 +104,6 @@ const useFirebase = () => {
       .then((res) => res.json())
       .then((data) => {
         setAdmin(data.admin);
-        setAdminloadData(false);
       });
   }, [user.email, loadData]);
 
@@ -140,10 +123,12 @@ const useFirebase = () => {
   return {
     setUser,
     registerUser,
+    setloginError,
     googleLogin,
+    setloadData,
     userLogin,
     logOut,
-    adminloadData,
+
     admin,
     registerError,
     loginError,

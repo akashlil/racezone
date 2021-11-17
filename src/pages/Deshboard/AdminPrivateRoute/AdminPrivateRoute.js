@@ -3,9 +3,11 @@ import { Redirect, Route } from "react-router-dom";
 import useAuth from "../../../context/useAuth";
 
 const AdminPrivateRoute = ({ children, ...rest }) => {
-  const { user, admin, adminloadData, loadData } = useAuth();
-  if (admin && adminloadData && loadData) {
-    return "";
+  const { user, admin, loadData } = useAuth();
+  if (!admin) {
+    return "loding...";
+  } else if (loadData) {
+    return "loding...";
   }
   return (
     <Route

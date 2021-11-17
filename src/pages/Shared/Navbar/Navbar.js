@@ -111,7 +111,7 @@ const Navbar = () => {
                               </button>
                             </Link> */}
                             <button
-                              onClick={logOut}
+                              onClick={() => logOut(history)}
                               className="list-group-item list-group-item-action border-0"
                             >
                               <i className="fas fa-sign-out-alt ">LogOut</i>

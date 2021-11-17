@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useAllDataLoad from "../../../hooks/useAllDataLoad";
-import { useForm } from "react-hook-form";
 const ManageallOrder = () => {
   const { dataLoadTime, orderList, deleteOrderList, udateOrderlist } =
     useAllDataLoad();
@@ -22,7 +21,7 @@ const ManageallOrder = () => {
     }
   };
   return (
-    <div className=" table-responsive t-body-h ">
+    <div className="table-responsive t-body-h ">
       <table className="table  table-borderless   caption-top">
         <caption className="fw-bolder fs-4">Manage All Orders</caption>
         <thead>

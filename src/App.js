@@ -17,24 +17,30 @@ function App() {
     <AuthProvider>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route exact path="/login">
-            <Login></Login>
-          </Route>
-          <Route exact path="/register">
-            <Register></Register>
-          </Route>
-          <Route exact path="/show/all/product">
-            <DisplayProductAll></DisplayProductAll>
-          </Route>
           <PrivateRoute path="/deshboard">
             <Deshboard></Deshboard>
           </PrivateRoute>
+
           <PrivateRoute path="/productdetals/:Productid">
             <ProductDetals></ProductDetals>
           </PrivateRoute>
+
+          <Route path="/show/all/product">
+            <DisplayProductAll></DisplayProductAll>
+          </Route>
+
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+
+          <Route path="/register">
+            <Register></Register>
+          </Route>
+
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>

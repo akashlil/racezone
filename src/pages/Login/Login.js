@@ -6,7 +6,14 @@ import { useForm } from "react-hook-form";
 const Login = () => {
   let history = useHistory();
   let location = useLocation();
-  const { googleLogin, userLogin, loginError } = useAuth();
+  const {
+    googleLogin,
+    userLogin,
+    loginError,
+    setUser,
+    setloginError,
+    setloadData,
+  } = useAuth();
 
   const {
     register,
@@ -14,7 +21,19 @@ const Login = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    userLogin(data.email, data.password, history, location);
+    userLogin(data.email, data.password)
+      .then((userCredentail) => {
+        setloginError("");
+        const { from } = location.state || { from: { pathname: "/" } };
+        const user = userCredentail.user;
+        setUser(user);
+        history.replace(from);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setloginError(errorMessage);
+      })
+      .finally(() => setloadData(false));
   };
 
   return (
