@@ -1,12 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 import useAuth from "../../context/useAuth";
 import useAllDataLoad from "../../hooks/useAllDataLoad";
 import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
 const ProductDetals = () => {
+  const history = useHistory();
   const { Productid } = useParams();
   const { productData, orderList } = useAllDataLoad();
   const { user } = useAuth();
@@ -41,6 +42,7 @@ const ProductDetals = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.acknowledged) {
+            history.push("/deshboard/myorder");
             reset();
           }
         });

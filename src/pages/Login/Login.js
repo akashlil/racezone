@@ -49,60 +49,62 @@ const Login = () => {
           />
         </div>
       </div>
-      <div className="col-md-6 ">
-        <div className=" p-5">
-          {loginError && (
-            <div class="alert alert-warning" role="alert">
-              <strong>You can`t be Login</strong>
-              {loginError}
-            </div>
-          )}
-          <h1 className="card-title  fw-bolder mb-5">Login With</h1>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">
-                Email address
-              </label>
-              <input
-                {...register("email", { required: true })}
-                type="email"
-                required
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-              {errors.email && <span>This field is required</span>}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">
-                Password
-              </label>
-              <input
-                {...register("password", { required: true })}
-                type="password"
-                required
-                className="form-control"
-                id="exampleInputPassword1"
-              />
-              {errors.password && <span>This field is required password</span>}
-            </div>
+      <div className="col-md-6 p-5">
+        <div className="shadow-lg m-5 ">
+          <div className="p-5">
+            {loginError && (
+              <div class="alert alert-warning" role="alert">
+                <strong>You can`t be Login</strong>
+                {loginError}
+              </div>
+            )}
+            <h1 className="card-title  fw-bolder mb-5 ">Login With</h1>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="mb-3">
+                <label htmlFor="exampleInputEmail1" className="form-label">
+                  Email address
+                </label>
+                <input
+                  {...register("email", { required: true })}
+                  type="email"
+                  required
+                  className="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                {errors.email && <span>This field is required</span>}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleInputPassword1" className="form-label">
+                  Password
+                </label>
+                <input
+                  {...register("password", { required: true })}
+                  type="password"
+                  required
+                  className="form-control"
+                  id="exampleInputPassword1"
+                />
+                {errors.password && (
+                  <span>This field is required password</span>
+                )}
+              </div>
 
-            <button type="submit" className="fs-5 btn btn-info w-100">
-              Login
+              <button type="submit" className="fs-5 btn btn-info w-100">
+                Login
+              </button>
+            </form>
+            <br />
+            <button
+              onClick={() => googleLogin(history, location)}
+              className="btn btn-success rounded-3 text-light"
+            >
+              <i className="fab fa-google me-2"></i>Continue with Google
             </button>
-          </form>
-          <br />
-          <br />
-          <br />
-          <button
-            onClick={() => googleLogin(history, location)}
-            className="btn btn-success rounded-3 text-light"
-          >
-            <i className="fab fa-google me-2"></i>Continue with Google
-          </button>
-          <br />
-          <br />
-          <Link to="/register">Crerate an account</Link>
+            <br />
+            <br />
+            <Link to="/register">Crerate an account</Link>
+          </div>
         </div>
       </div>
     </div>
